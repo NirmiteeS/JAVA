@@ -1,5 +1,6 @@
 public class Shopping {
     public static void main(String args[]){
+        //using 3D array 
         int [][][] cart=
         {//conveyar belt 1
             { //cart 1
