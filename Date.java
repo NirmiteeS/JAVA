@@ -49,11 +49,9 @@ public class Date {
         }
     }
     public static String getDay(int a, int b) throws DayError{
-        if(a==2 && b==29){
-            return "29";
-        }
-        else if(b<1 || (b>31 && (a==1 || a==3 || a==5 || a==7 || a==8 || a==10 || a==12)) || 
-        (b>30 && (a==2 || a==4 || a==6 || a==10 || a==11)) ){
+        
+        if(b<1 || (b>31 && (a==1 || a==3 || a==5 || a==7 || a==8 || a==10 || a==12)) || 
+        (b>30 && (a==4 || a==6 || a==10 || a==11)) || a==2 && b>29 ){
             throw new DayError("Invalid numeric value of day");
         }
         return String.valueOf(b);
